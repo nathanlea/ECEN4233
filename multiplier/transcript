@@ -1,0 +1,26 @@
+# do run.do\\
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 14:52:51 on Apr 11,2016
+# vlog -reportprogress 300 multiplier.sv tadders.sv tb.sv 
+# -- Compiling module multiplier
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 14:52:51 on Apr 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -do "run.do"" 
+# Start time: 14:52:51 on Apr 11,2016
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.multiplier
+# Loading work.half_adder
+# Loading work.full_adder
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# Testing... 
+# Test Complete
+# End time: 14:53:17 on Apr 11,2016, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0

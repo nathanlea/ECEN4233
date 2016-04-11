@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Katie/Documents/Katie Hobble/Documents/Katie's Stuff/COLLEGE/Spring 2016/ECEN 4233/Project/multiplier
+vfull_adder
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1460404371
+!i10b 1
+!s100 @2oHQ4E`=@L_dboin6okV2
+I929[njmY=E2fYDIeMSh4f2
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 !s105 tadders_sv_unit
+S1
+R0
+Z5 w1458694673
+Z6 8tadders.sv
+Z7 Ftadders.sv
+L0 12
+Z8 OV;L;10.3c;59
+r1
+!s85 0
+31
+Z9 !s108 1460404371.560000
+Z10 !s107 tb.sv|tadders.sv|multiplier.sv|
+Z11 !s90 -reportprogress|300|multiplier.sv|tadders.sv|tb.sv|
+!i113 1
+vhalf_adder
+R1
+R2
+!i10b 1
+!s100 G69?leLb:g=3zX@GebhcU2
+INOLAl<I]`HSf<MDKc>jQH2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+vmultiplier
+R1
+R2
+!i10b 1
+!s100 INREHTIAzg@HmA3XmL?gF2
+I@IOLNe9XSTozU89_bIVZU2
+R3
+!s105 multiplier_sv_unit
+S1
+R0
+w1460403453
+8multiplier.sv
+Fmultiplier.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+vtb
+R1
+R2
+!i10b 1
+!s100 6@U7>dAK<X^_=o1nA4[bZ3
+In`RI_k]`lOfgRkbM^0I511
+R3
+!s105 tb_sv_unit
+S1
+R0
+w1460404164
+8tb.sv
+Ftb.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
