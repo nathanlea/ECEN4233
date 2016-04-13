@@ -1,0 +1,36 @@
+# do run.do
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 14:52:15 on Apr 13,2016
+# vlog -reportprogress 300 tadders.sv multiplier.sv truncate.sv main.sv mux31.sv mux51.sv mux21.sv tb.sv 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module multiplier
+# -- Compiling module truncate
+# -- Compiling module main
+# -- Compiling module mux31
+# -- Compiling module mux51
+# -- Compiling module mux21
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 14:52:16 on Apr 13,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -do "run.do" 
+# Start time: 14:52:16 on Apr 13,2016
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.main
+# Loading work.mux31
+# Loading work.mux21
+# Loading work.mux51
+# Loading work.multiplier
+# Loading work.half_adder
+# Loading work.full_adder
+# Loading work.truncate
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# Testing... 
+# Test Complete
+# End time: 14:52:27 on Apr 13,2016, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 0
