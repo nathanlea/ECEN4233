@@ -1,4 +1,4 @@
-module reg(D, Q, clk, load);
+module dff(D, Q, clk, load);
 
    input logic[26:0] D;
    input logic clk, load;
