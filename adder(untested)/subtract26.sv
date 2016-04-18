@@ -1,4 +1,4 @@
-module subtract26(input logic [52:0] A, B, output logic Cout, output logic [52:0] S);
+module subtract26(input logic [26:0] A, B, output logic Cout, output logic [26:0] S);
 
     logic [26:0] g, p, c;
     logic [9:0] gGroupL1, pGroupL1;
