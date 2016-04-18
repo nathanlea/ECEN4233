@@ -25,8 +25,8 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
     mux21 muxIA (muxIA1Out, muxIA2Out, IA, Ms);
     
     //Extend N and] D
-    assign nExt = {3'b000, N};
-    assign dExt = {3'b000, D};
+    assign nExt = {N, 3'b000};
+    assign dExt = {D, 3'b000};
     
     //Select from Mux B (3:1)
     //IA, nExt, Rk
@@ -49,7 +49,7 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
     
     //Set up subtract value
     logic[26:0] subValue;
-    mux21 subMux(27'd2, 27'd3, subValue, Ms);
+    mux21 subMux(27'b000000000000000000000000000, 27'b100000000000000000000000000, subValue, Ms);
     
     //Subtract truncOut from subValue
     logic Cout;

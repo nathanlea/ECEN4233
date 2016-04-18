@@ -1,9 +1,9 @@
-module rfa26(input logic [26:0] A, B, Cin, output logic [26:0] S, g, p);
+module rfa26(input logic [27:0] A, B, Cin, output logic [27:0] S, g, p);
 
-    logic [26:0] K;    
+    logic [27:0] K;    
     
-    subtract subINT[26:0](B[26:0], K[26:0]);
+    subtract subINT[27:0](B[27:0], K[27:0]);
     
-    rfa rfa510[26:0](A[26:0], K[26:0], Cin[26:0], S[26:0], g[26:0], p[26:0]);
+    rfa rfa510[27:0](A[27:0], K[27:0], Cin[27:0], S[27:0], g[27:0], p[27:0]);
     
     endmodule
