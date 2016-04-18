@@ -27,7 +27,7 @@ if [file exists work] {
 vlib work
 
 # compile source files
-vlog bclg3.sv bclg5.sv rfa.sv rfa26.sv subtract.sv subtract26.sv tb.sv
+vlog *.sv
 
 # start and run simulation
 vsim -novopt work.tb
@@ -65,4 +65,4 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation
-run 7000
+run 150

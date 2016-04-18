@@ -1,36 +1,56 @@
 # do run.do
 # Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 14:52:15 on Apr 13,2016
-# vlog -reportprogress 300 tadders.sv multiplier.sv truncate.sv main.sv mux31.sv mux51.sv mux21.sv tb.sv 
-# -- Compiling module half_adder
-# -- Compiling module full_adder
-# -- Compiling module multiplier
-# -- Compiling module truncate
+# Start time: 15:00:54 on Apr 18,2016
+# vlog -reportprogress 300 bclg3.sv bclg5.sv dff.sv div2.sv main.sv multiplier.sv mux21.sv mux31.sv mux51.sv mux81.sv rfa.sv rfa26.sv subtract.sv subtract26.sv tadders.sv tb.sv truncate.sv 
+# -- Compiling module bclg3
+# -- Compiling module bclg5
+# -- Compiling module dff
+# -- Compiling module div2
 # -- Compiling module main
+# -- Compiling module multiplier
+# -- Compiling module mux21
 # -- Compiling module mux31
 # -- Compiling module mux51
-# -- Compiling module mux21
+# -- Compiling module mux81
+# -- Compiling module rfa
+# -- Compiling module rfa26
+# -- Compiling module subtract
+# -- Compiling module subtract26
+# -- Compiling module half_adder
+# -- Compiling module full_adder
 # -- Compiling module tb
+# -- Compiling module truncate
 # 
 # Top level modules:
+# 	mux51
 # 	tb
-# End time: 14:52:16 on Apr 13,2016, Elapsed time: 0:00:01
+# End time: 15:00:54 on Apr 18,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -do "run.do" 
-# Start time: 14:52:16 on Apr 13,2016
+# Start time: 15:00:54 on Apr 18,2016
 # Loading sv_std.std
 # Loading work.tb
 # Loading work.main
-# Loading work.mux31
 # Loading work.mux21
-# Loading work.mux51
+# Loading work.mux31
+# Loading work.mux81
 # Loading work.multiplier
 # Loading work.half_adder
 # Loading work.full_adder
 # Loading work.truncate
+# Loading work.dff
+# Loading work.subtract26
+# Loading work.rfa26
+# Loading work.bclg5
+# Loading work.bclg3
+# Loading work.div2
+# Loading work.subtract
+# Loading work.rfa
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
 # Testing... 
-# Test Complete
-# End time: 14:52:27 on Apr 13,2016, Elapsed time: 0:00:11
-# Errors: 0, Warnings: 0
+# ** Error: Crap
+#    Time: 130 ps  Scope: tb File: tb.sv Line: 186
+add wave -position end sim:/tb/dut/muxIA1/*
+add wave -position end sim:/tb/dut/muxIA2/*
+add wave -position end sim:/tb/dut/muxIA/*
