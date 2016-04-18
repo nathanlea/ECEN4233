@@ -1,4 +1,4 @@
-module rfa53(input logic [26:0] A, B, Cin, output logic [26:0] S, g, p);
+module rfa26(input logic [26:0] A, B, Cin, output logic [26:0] S, g, p);
 
     logic [26:0] K;    
     
