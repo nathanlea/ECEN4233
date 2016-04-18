@@ -1,0 +1,24 @@
+# do run.do
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:54:50 on Apr 18,2016
+# vlog -reportprogress 300 mux81.sv mux21.sv tb.sv 
+# -- Compiling module mux81
+# -- Compiling module mux21
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 13:54:51 on Apr 18,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -do "run.do" 
+# Start time: 13:54:51 on Apr 18,2016
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.mux81
+# Loading work.mux21
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# Testing...
+# Testing Complete...
+# End time: 13:57:16 on Apr 18,2016, Elapsed time: 0:02:25
+# Errors: 0, Warnings: 0
