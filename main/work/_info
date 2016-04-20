@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/Katie/Documents/Katie Hobble/Documents/Katie's Stuff/COLLEGE/Spring 2016/ECEN 4233/Project/main
 vbclg2
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1461181086
+Z2 !s110 1461183205
 !i10b 1
 !s100 gO;J2Ank]0eJ3f@h=P<Mf1
 III8g;]Ck[KVRd4LZL?0Q<0
@@ -26,7 +26,7 @@ Z5 OV;L;10.3c;59
 r1
 !s85 0
 31
-Z6 !s108 1461181086.293000
+Z6 !s108 1461183205.198000
 Z7 !s107 truncate.sv|tb.sv|tadders.sv|subtract26.sv|subtract.sv|rfa26.sv|rfa.sv|mux81.sv|mux51.sv|mux31.sv|mux21.sv|multiplier.sv|main.sv|div2.sv|dff.sv|bclg5.sv|bclg3.sv|bclg2.sv|
 Z8 !s90 -reportprogress|300|bclg2.sv|bclg3.sv|bclg5.sv|dff.sv|div2.sv|main.sv|multiplier.sv|mux21.sv|mux31.sv|mux51.sv|mux81.sv|rfa.sv|rfa26.sv|subtract.sv|subtract26.sv|tadders.sv|tb.sv|truncate.sv|
 !i113 1
@@ -386,13 +386,13 @@ vtb
 R1
 R2
 !i10b 1
-!s100 nVK[T8aBf<R6MThAPaSAI1
-I0hkc?9Q4bZEQAdnEERma83
+!s100 B2g_@<dLJ4D?RW=26<baf2
+I^JSh:O?DDgfVf7Y>aB_7e1
 R3
 !s105 tb_sv_unit
 S1
 R0
-w1461179813
+w1461183190
 8tb.sv
 Ftb.sv
 L0 1

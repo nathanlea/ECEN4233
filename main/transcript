@@ -1,6 +1,6 @@
 # do run.do
 # Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 14:38:06 on Apr 20,2016
+# Start time: 15:13:25 on Apr 20,2016
 # vlog -reportprogress 300 bclg2.sv bclg3.sv bclg5.sv dff.sv div2.sv main.sv multiplier.sv mux21.sv mux31.sv mux51.sv mux81.sv rfa.sv rfa26.sv subtract.sv subtract26.sv tadders.sv tb.sv truncate.sv 
 # -- Compiling module bclg2
 # -- Compiling module bclg3
@@ -25,10 +25,10 @@
 # Top level modules:
 # 	mux51
 # 	tb
-# End time: 14:38:06 on Apr 20,2016, Elapsed time: 0:00:00
+# End time: 15:13:25 on Apr 20,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -do "run.do" 
-# Start time: 14:38:06 on Apr 20,2016
+# Start time: 15:13:25 on Apr 20,2016
 # Loading sv_std.std
 # Loading work.tb
 # Loading work.main
@@ -51,5 +51,7 @@
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
 # Testing... 
-# End time: 14:39:43 on Apr 20,2016, Elapsed time: 0:01:37
-# Errors: 0, Warnings: 0
+# ** Error: Crap Again
+#    Time: 670 ps  Scope: tb File: tb.sv Line: 368
+# End time: 15:14:37 on Apr 20,2016, Elapsed time: 0:01:12
+# Errors: 1, Warnings: 0
