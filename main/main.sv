@@ -20,8 +20,8 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
     logic iaSelect;
     assign iaSelect = N[23] & N[22];
     logic[26:0] muxIA1Out, muxIA2Out;
-    mux21 muxIA1(27'b110101010101010101010101010, 27'b100101010101010101010101010, muxIA1Out, iaSelect);
-    mux21 muxIA2(27'b111010001000001011110101101, 27'b110000110000010101101111010, muxIA2Out, iaSelect);
+    mux21 muxIA1(27'b011010101010101010101010101, 27'b010010101010101010101010101, muxIA1Out, iaSelect);
+    mux21 muxIA2(27'b011101000100000101111010110, 27'b011000011000001010110111101, muxIA2Out, iaSelect);
     mux21 muxIA (muxIA1Out, muxIA2Out, IA, Ms);
     
     //Extend N and] D
