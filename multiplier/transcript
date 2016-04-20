@@ -1,6 +1,6 @@
-# do run.do\\
+# do run.do
 # Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 14:52:51 on Apr 11,2016
+# Start time: 14:36:44 on Apr 20,2016
 # vlog -reportprogress 300 multiplier.sv tadders.sv tb.sv 
 # -- Compiling module multiplier
 # -- Compiling module half_adder
@@ -9,10 +9,10 @@
 # 
 # Top level modules:
 # 	tb
-# End time: 14:52:51 on Apr 11,2016, Elapsed time: 0:00:00
+# End time: 14:36:44 on Apr 20,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -do "run.do"" 
-# Start time: 14:52:51 on Apr 11,2016
+# vsim -do "run.do" 
+# Start time: 14:36:44 on Apr 20,2016
 # Loading sv_std.std
 # Loading work.tb
 # Loading work.multiplier
@@ -21,6 +21,15 @@
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
 # Testing... 
+# ** Error: ERROR! Value A = 95070891, B = 58720255, 
+# S:5582586962597205  !=  STest: -1476395008
+#    Time: 135 ps  Scope: tb File: tb.sv Line: 114
+# ** Error: ERROR! Value A = 134217727, B = 67108864, 
+# S:9007199187632128  !=  STest: -134217728
+#    Time: 150 ps  Scope: tb File: tb.sv Line: 123
+# ** Error: ERROR! Value A = 58720255, B = 67108864, 
+# S:3940649606840320  !=  STest: -134217728
+#    Time: 165 ps  Scope: tb File: tb.sv Line: 132
 # Test Complete
-# End time: 14:53:17 on Apr 11,2016, Elapsed time: 0:00:26
-# Errors: 0, Warnings: 0
+# End time: 14:37:56 on Apr 20,2016, Elapsed time: 0:01:12
+# Errors: 3, Warnings: 0

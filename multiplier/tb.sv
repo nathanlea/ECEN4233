@@ -105,6 +105,33 @@ module tb ();
             $error("ERROR! Value A = %0d, B = %0d, \nS:%0d  !=  STest: %0d\n", A, B, Out, STest);
             errorCount++;
             end
+            
+        #10 A = 27'b101101010101010101010101011;
+        #0  B = 27'b011011111111111111111111111;
+        #5
+        STest = 54'b100111101010101010101010101000000000000000000000000000;
+        assert (Out == STest) else begin 
+            $error("ERROR! Value A = %0d, B = %0d, \nS:%0d  !=  STest: %0d\n", A, B, Out, STest);
+            errorCount++;
+            end
+            
+        #10 A = 27'b111111111111111111111111111;
+        #0  B = 27'b100000000000000000000000000;
+        #5
+        STest = 54'b111111111111111111111111111000000000000000000000000000;
+        assert (Out == STest) else begin 
+            $error("ERROR! Value A = %0d, B = %0d, \nS:%0d  !=  STest: %0d\n", A, B, Out, STest);
+            errorCount++;
+            end
+        
+        #10 A = 27'b011011111111111111111111111;
+        #0  B = 27'b100000000000000000000000000;
+        #5
+        STest = 54'b011011111111111111111111111000000000000000000000000000;
+        assert (Out == STest) else begin 
+            $error("ERROR! Value A = %0d, B = %0d, \nS:%0d  !=  STest: %0d\n", A, B, Out, STest);
+            errorCount++;
+            end
         
         $display ("Test Complete");
     end

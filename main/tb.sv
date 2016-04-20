@@ -29,10 +29,13 @@ module tb ();
         #0  Ma = 3'd5;
         #0  Ms = 1'b0;
         #0  Mq = 1'b0;
-        #0  La = 1'b1;
+        #5  La = 1'b1;
         #0  Lb = 1'b0;
         #0  Lk = 1'b0;
-        
+        #10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #5
         //STest = 27'b000000000000;
         //assert (Out == STest) else begin 
           //  $error("ERROR! Value N = %0d, D = %0d, \nS:%0d  !=  STest: %0d\n", N, D, Out, STest);
@@ -45,10 +48,13 @@ module tb ();
         #0  Ma = 3'd1;
         #0  Ms = 1'b0;
         #0  Mq = 1'b0;
-        #0  La = 1'b0;
+        #5  La = 1'b0;
         #0  Lb = 1'b1;
         #0  Lk = 1'b1;
-        
+        #10  La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #5
         
         //Cycle 2
         #20 N = 24'b110000000000000000000000;
@@ -57,10 +63,13 @@ module tb ();
         #0  Ma = 3'd2;
         #0  Ms = 1'b0;
         #0  Mq = 1'b0;
-        #0  La = 1'b1;
+        #10  La = 1'b1;
         #0  Lb = 1'b0;
         #0  Lk = 1'b0;
-        
+        #15  La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #5
         
         //Cycle 3
         #20 N = 24'b110000000000000000000000;
