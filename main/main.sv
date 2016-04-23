@@ -58,7 +58,7 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
     
     //Divide subOut by 2
     logic[26:0] divOut;
-    div2 div(subOut, divOut);
+    div2 div(subOut, divOut, Cout);
     
     //Select whether or not we want the divide value
     logic[26:0] selectOut;

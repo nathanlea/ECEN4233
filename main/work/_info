@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/Katie/Documents/Katie Hobble/Documents/Katie's Stuff/COLLEGE/Spring 2016/ECEN 4233/Project/main
 vbclg2
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1461185945
+Z2 !s110 1461356563
 !i10b 1
 !s100 gO;J2Ank]0eJ3f@h=P<Mf1
 III8g;]Ck[KVRd4LZL?0Q<0
@@ -26,7 +26,7 @@ Z5 OV;L;10.3c;59
 r1
 !s85 0
 31
-Z6 !s108 1461185945.834000
+Z6 !s108 1461356563.599000
 Z7 !s107 truncate.sv|tb.sv|tadders.sv|subtract26.sv|subtract.sv|rfa26.sv|rfa.sv|mux81.sv|mux51.sv|mux31.sv|mux21.sv|multiplier.sv|main.sv|div2.sv|dff.sv|bclg5.sv|bclg3.sv|bclg2.sv|
 Z8 !s90 -reportprogress|300|bclg2.sv|bclg3.sv|bclg5.sv|dff.sv|div2.sv|main.sv|multiplier.sv|mux21.sv|mux31.sv|mux51.sv|mux81.sv|rfa.sv|rfa26.sv|subtract.sv|subtract26.sv|tadders.sv|tb.sv|truncate.sv|
 !i113 1
@@ -100,13 +100,13 @@ vdiv2
 R1
 R2
 !i10b 1
-!s100 j0PJ7;Z]6Z8K98@_h;iHS2
-IMaDl_<XRo`1neD9EM^LFD1
+!s100 @@EL6zTi_L47GOD_^]b^^0
+IcSo4HU3g=44mEY2ZjoW?22
 R3
 !s105 div2_sv_unit
 S1
 R0
-w1460400797
+w1461356010
 8div2.sv
 Fdiv2.sv
 L0 1
@@ -120,17 +120,17 @@ R8
 !i113 1
 vfull_adder
 R1
-Z10 !s110 1461185946
+R2
 !i10b 1
 !s100 @2oHQ4E`=@L_dboin6okV2
 I929[njmY=E2fYDIeMSh4f2
 R3
-Z11 !s105 tadders_sv_unit
+Z10 !s105 tadders_sv_unit
 S1
 R0
-Z12 w1458694673
-Z13 8tadders.sv
-Z14 Ftadders.sv
+Z11 w1458694673
+Z12 8tadders.sv
+Z13 Ftadders.sv
 L0 12
 R5
 r1
@@ -142,17 +142,17 @@ R8
 !i113 1
 vhalf_adder
 R1
-R10
+R2
 !i10b 1
 !s100 G69?leLb:g=3zX@GebhcU2
 INOLAl<I]`HSf<MDKc>jQH2
 R3
-R11
+R10
 S1
 R0
+R11
 R12
 R13
-R14
 L0 1
 R5
 r1
@@ -166,13 +166,13 @@ vmain
 R1
 R2
 !i10b 1
-!s100 C[T?M7QNUC6SM=nMMIzCI2
-I::GfBoh;Zal?1cL>?4]0k2
+!s100 J=:niaEjWL^`EeWT95kRR3
+I7F4Gk9[1>eQ0Y;]7U;_MG0
 R3
 !s105 main_sv_unit
 S1
 R0
-w1461185926
+w1461355956
 8main.sv
 Fmain.sv
 L0 1
@@ -186,7 +186,7 @@ R8
 !i113 1
 vmultiplier
 R1
-R10
+R2
 !i10b 1
 !s100 INREHTIAzg@HmA3XmL?gF2
 I@IOLNe9XSTozU89_bIVZU2
@@ -208,7 +208,7 @@ R8
 !i113 1
 vmux21
 R1
-R10
+R2
 !i10b 1
 !s100 24m<jIF3Vi;<4554K30Pa3
 Ij5c132fY0U8T<RWoJjK9;1
@@ -230,7 +230,7 @@ R8
 !i113 1
 vmux31
 R1
-R10
+R2
 !i10b 1
 !s100 zdBnzN]zg>Hc5;_?QH;6D3
 ICQWm:SS>hUWi=6FAG796G1
@@ -252,7 +252,7 @@ R8
 !i113 1
 vmux51
 R1
-R10
+R2
 !i10b 1
 !s100 gU8DQZlh_3MOmIW`gzBc>3
 I9@[nF0iljJ7Zn9FRVf3Gf1
@@ -274,7 +274,7 @@ R8
 !i113 1
 vmux81
 R1
-R10
+R2
 !i10b 1
 !s100 g38NUzZYl827O2:ziYU;01
 IC<1585lbH5VYHJNh6@X890
@@ -296,7 +296,7 @@ R8
 !i113 1
 vrfa
 R1
-R10
+R2
 !i10b 1
 !s100 nFTTbH^Y`YzJL@R`d0LC70
 I85JZ2l;M9@VEheDaA8l`n3
@@ -318,7 +318,7 @@ R8
 !i113 1
 vrfa26
 R1
-R10
+R2
 !i10b 1
 !s100 U6gM`0DTeGdWSM`N]iNI42
 Idn@^C7diE`;9PCj:A3D:e0
@@ -340,7 +340,7 @@ R8
 !i113 1
 vsubtract
 R1
-R10
+R2
 !i10b 1
 !s100 7O3KknD2HWVgn[>D_1B]f2
 I3K0zBYn_U_2jU?_[]E9ni1
@@ -362,15 +362,15 @@ R8
 !i113 1
 vsubtract26
 R1
-R10
+R2
 !i10b 1
-!s100 U;7<;=H4[Hn5DIQ=a7Z:T1
-ID;n^F]06oYn=gQ3I?4Ql52
+!s100 4W8lGP>M3Un<PzCz07ed30
+IcAkTg6EAa[MX9MR@7:`@J0
 R3
 !s105 subtract26_sv_unit
 S1
 R0
-R4
+w1461355918
 8subtract26.sv
 Fsubtract26.sv
 L0 1
@@ -384,15 +384,15 @@ R8
 !i113 1
 vtb
 R1
-R10
+R2
 !i10b 1
-!s100 ^`THbY_P^o2g8_DK<[<OK0
-Ib?>=]?Q79ei;?jAg@MS8m2
+!s100 9kN?Rjz:XjPc72EeOY6J<2
+I?`e7Wabm_BVP8acWAE1jK0
 R3
 !s105 tb_sv_unit
 S1
 R0
-w1461185142
+w1461356536
 8tb.sv
 Ftb.sv
 L0 1
@@ -406,7 +406,7 @@ R8
 !i113 1
 vtruncate
 R1
-R10
+R2
 !i10b 1
 !s100 kMQ`V0I@B7nNMZ1=cDnbX2
 I[YcJaECO6nK`]=^;n0]@B1

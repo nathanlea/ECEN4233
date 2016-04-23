@@ -32,6 +32,7 @@ module subtract26(input logic [26:0] A, B, output logic Cout, output logic [26:0
     // module bclg3 (input logic[2:0] g, p, input logic Cin, output logic [1:0] Cout, output logic gGroup, pGoup);
     bclg2 bclg2L2N1( {gGroupL1[5], gGroupL2}, {pGroupL1[5], pGroupL2}, c[0], c[25], gGroupL3, pGroupL3 );
     
-    assign Cout = gGroupL3 | pGroupL3 & c[0];
+    //assign Cout = gGroupL3 | pGroupL3 & c[0];
+	assign Cout = SS[27];
 
 endmodule

@@ -1,8 +1,9 @@
-module div2(D, Q);
+module div2(D, Q, C);
 
    input logic[26:0] D;
+   input logic C;
    output logic[26:0] Q;
 
-   assign Q = {1'b0, D[26:1]};
+   assign Q = {C, D[26:1]};
 
 endmodule // div2
