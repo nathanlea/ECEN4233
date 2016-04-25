@@ -13,7 +13,7 @@
 # //
 # do run.do
 # Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
-# Start time: 12:35:35 on Apr 25,2016
+# Start time: 14:39:55 on Apr 25,2016
 # vlog -reportprogress 300 bclg2.sv bclg3.sv bclg5.sv dff.sv div2.sv main.sv multiplier.sv mux21.sv mux31.sv mux51.sv mux81.sv rfa.sv rfa26.sv subtract.sv subtract26.sv tadders.sv tb.sv truncate.sv 
 # -- Compiling module bclg2
 # -- Compiling module bclg3
@@ -36,12 +36,12 @@
 # -- Compiling module truncate
 # 
 # Top level modules:
-# 	mux51
+# 	mux31
 # 	tb
-# End time: 12:35:36 on Apr 25,2016, Elapsed time: 0:00:01
+# End time: 14:39:56 on Apr 25,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -novopt work.tb 
-# Start time: 12:35:36 on Apr 25,2016
+# Start time: 14:39:56 on Apr 25,2016
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.tb
 # Loading sv_std.std
@@ -50,8 +50,8 @@
 # Loading work.main
 # Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.mux21
 # Loading work.mux21
-# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.mux31
-# Loading work.mux31
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.mux51
+# Loading work.mux51
 # Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.mux81
 # Loading work.mux81
 # Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.multiplier
@@ -84,9 +84,9 @@
 # .main_pane.wave.interior.cs.body.pw.wf
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Katie  Hostname: KATIESLAPTOP  ProcessID: 1492
-#           Attempting to use alternate WLF file "./wlftc70m59".
+#           Attempting to use alternate WLF file "./wlftxxjq9g".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftc70m59
+#           Using alternate file: ./wlftxxjq9g
 # Testing... 
-# End time: 12:36:30 on Apr 25,2016, Elapsed time: 0:00:54
+# End time: 14:42:29 on Apr 25,2016, Elapsed time: 0:02:33
 # Errors: 0, Warnings: 3

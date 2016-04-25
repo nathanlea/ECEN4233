@@ -1,12 +1,11 @@
-module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
+module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, Lf, clk, Out);
     
     input logic[23:0] N, D;
-    input logic[2:0]  Ma;
-    input logic[1:0]  Mb;
-    input logic       Sn, Sd, Ms, Mq, La, Lb, Lk, clk;
+    input logic[2:0]  Ma, Mb;
+    input logic       Sn, Sd, Ms, Mq, La, Lb, Lk, Lf, clk;
     output logic[23:0] Out;
     
-    logic[26:0] IA, muxBOut, muxAOut, nExt, dExt, Rk, Ra, Rb, rnd;
+    logic[26:0] IA, muxBOut, muxAOut, nExt, dExt, Rk, Ra, Rb, Rf, rnd;
     logic[26:0] truncOut;
     logic[53:0] multOut;
     
@@ -28,12 +27,12 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
     assign nExt = {N, 3'b000};
     assign dExt = {D, 3'b000};
     
-    //Select from Mux B (3:1)
-    //IA, nExt, Rk
-    mux31 muxB(IA, nExt, Rk, muxBOut, Mb);
+    //Select from Mux B (5:1)
+    //IA, nExt, Rk, 1, X
+    mux51 muxB(IA, nExt, Rk, 27'b100000000000000000000000000, 27'b0, muxBOut, Mb);
     //Select from Mux A
-    //nExt, dExt, Ra, Rb, Rk, IA
-    mux81 muxA(nExt, dExt, Ra, Rb, Rk, IA, 27'b0, 27'b0, muxAOut, Ma);
+    //nExt, dExt, Ra, Rb, Rk, IA, Rf, X
+    mux81 muxA(nExt, dExt, Ra, Rb, Rk, IA, Rf, 27'b0, muxAOut, Ma);
     
     //Put into multiplier
     multiplier mult(multOut, muxBOut, muxAOut);
@@ -74,6 +73,9 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
 	assign rnd = truncOut + 27'b000000000000000000000000001;
 	
 	assign Out = ( truncOut[0] & truncOut[1] & truncOut[2] ) ? rnd[26:3] : truncOut[26:3];
+	
+	//Push Rf, only for getting the inverse of the final
+	dff RF(rnd, Rf, clk, Lf);
     
     //assign Out = truncOut[26:3];
     
