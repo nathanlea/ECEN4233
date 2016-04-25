@@ -1,6 +1,19 @@
+# //  ModelSim SE-64 10.5 Feb 13 2016 
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
 # do run.do
-# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
-# Start time: 15:22:43 on Apr 22,2016
+# Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+# Start time: 12:35:35 on Apr 25,2016
 # vlog -reportprogress 300 bclg2.sv bclg3.sv bclg5.sv dff.sv div2.sv main.sv multiplier.sv mux21.sv mux31.sv mux51.sv mux81.sv rfa.sv rfa26.sv subtract.sv subtract26.sv tadders.sv tb.sv truncate.sv 
 # -- Compiling module bclg2
 # -- Compiling module bclg3
@@ -25,44 +38,55 @@
 # Top level modules:
 # 	mux51
 # 	tb
-# End time: 15:22:43 on Apr 22,2016, Elapsed time: 0:00:00
+# End time: 12:35:36 on Apr 25,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vsim -do "run.do" 
-# Start time: 15:22:43 on Apr 22,2016
+# vsim -novopt work.tb 
+# Start time: 12:35:36 on Apr 25,2016
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.tb
 # Loading sv_std.std
 # Loading work.tb
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.main
 # Loading work.main
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.mux21
 # Loading work.mux21
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.mux31
 # Loading work.mux31
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.mux81
 # Loading work.mux81
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.multiplier
 # Loading work.multiplier
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.half_adder
 # Loading work.half_adder
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.full_adder
 # Loading work.full_adder
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.truncate
 # Loading work.truncate
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.dff
 # Loading work.dff
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.subtract26
 # Loading work.subtract26
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.rfa26
 # Loading work.rfa26
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.bclg5
 # Loading work.bclg5
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.bclg3
 # Loading work.bclg3
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.bclg2
 # Loading work.bclg2
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.div2
 # Loading work.div2
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.subtract
 # Loading work.subtract
+# Refreshing C:/Users/ngoalie/Documents/GitHub/HSProject/main/work.rfa
 # Loading work.rfa
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-# 
 #           File in use by: Katie  Hostname: KATIESLAPTOP  ProcessID: 1492
-# 
-#           Attempting to use alternate WLF file "./wlfttm39ji".
+#           Attempting to use alternate WLF file "./wlftc70m59".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-# 
-#           Using alternate file: ./wlfttm39ji
-# 
+#           Using alternate file: ./wlftc70m59
 # Testing... 
-# ** Error: Crap Again
-#    Time: 520 ps  Scope: tb File: tb.sv Line: 482
-# ** Error: Crap x3
-#    Time: 788 ps  Scope: tb File: tb.sv Line: 708
-# End time: 19:03:41 on Apr 22,2016, Elapsed time: 3:40:58
-# Errors: 2, Warnings: 2
+# End time: 12:36:30 on Apr 25,2016, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 3

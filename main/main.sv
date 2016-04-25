@@ -4,9 +4,9 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
     input logic[2:0]  Ma;
     input logic[1:0]  Mb;
     input logic       Sn, Sd, Ms, Mq, La, Lb, Lk, clk;
-    output logic[26:0] Out;
+    output logic[23:0] Out;
     
-    logic[26:0] IA, muxBOut, muxAOut, nExt, dExt, Rk, Ra, Rb;
+    logic[26:0] IA, muxBOut, muxAOut, nExt, dExt, Rk, Ra, Rb, rnd;
     logic[26:0] truncOut;
     logic[53:0] multOut;
     
@@ -70,7 +70,11 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, clk, Out);
     
     //Push to Rk
     dff RK(modOut, Rk, clk, Lk);
+	
+	assign rnd = truncOut + 27'b000000000000000000000000001;
+	
+	assign Out = ( truncOut[0] & truncOut[1] & truncOut[2] ) ? rnd[26:3] : truncOut[26:3];
     
-    assign Out = truncOut[26:3];
+    //assign Out = truncOut[26:3];
     
 endmodule
