@@ -3,10 +3,10 @@ module tb ();
    logic[23:0]  N, D;
    logic[23:0]  Out;
    logic[2:0]   Ma, Mb;
-   logic        Sn, Sd, Ms, Mq, La, Lb, Lk, Lf, clk;
+   logic        Sn, Sd, Ms, Mq, La, Lb, Lk, Lf, clk, signOut, errorOut;
    
   // instantiate device under test
-  main dut (N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, Lf, clk, Out);
+  main dut (N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, Lf, clk, Out, signOut, errorOut);
 
   /*/ generate clock
   always 
@@ -14,13 +14,14 @@ module tb ();
       clk = 1; #10; clk = 0; #10;
     end
   */  
-   integer STest, errorCount;
+
    initial
      begin
         $display ("Testing... ");
         
-        #0 errorCount = 0;
 		#0 Lf = 1'b0;
+		#0 Sn = 0;
+		#0 Sd = 0;
         
         //Cycle 0
         #0  N = 24'b110000000000000000000000;
@@ -687,6 +688,7 @@ module tb ();
 		#0 clk = 1;
 		#10 Lf = 1'b0;
 		#0 clk = 0;
+		#10
 		
         #0  Mb = 3'd3;
         #0  Ma = 3'd5;
@@ -954,7 +956,7 @@ module tb ();
         #10
         
         //Cycle 4
-        #0 N = 24'b110000000000000000000000;
+       #0 N = 24'b110000000000000000000000;
         #0  Mb = 3'd2;
         #0  Ma = 3'd4;
         #0  Ms = 1'b1;
@@ -1196,7 +1198,247 @@ module tb ();
         assert (Out == 24'b100111001100010001110000) else begin
             $error ("Crap x4");
             end
+		
+		//Inverse of test 4
+		//Cycle 0
+		#0 Lf = 1'b1;
+		#0 clk = 1;
+		#10 Lf = 1'b0;
+		#0 clk = 0;
+		#10
+		
+        #0  Mb = 3'd3;
+        #0  Ma = 3'd5;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b1;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+
+        //Cycle 1
+        #0  Mb = 3'd0;
+        #0  Ma = 3'd6;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b0;
+        #0  Lb = 1'b1;
+        #0  Lk = 1'b1;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
         
+        //Cycle 2
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd2;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b1;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 3
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd3;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b0;
+        #0  Lb = 1'b1;
+        #0  Lk = 1'b1;
+		#0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+       
+        
+        //Cycle 4
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd2;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b1;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 5
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd3;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b0;
+        #0  Lb = 1'b1;
+        #0  Lk = 1'b1;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 6
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd2;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b1;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 7
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd3;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b0;
+        #0  Lb = 1'b1;
+        #0  Lk = 1'b1;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 8
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd2;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b1;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 9
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd3;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b0;
+        #0  Lb = 1'b1;
+        #0  Lk = 1'b1;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 10
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd2;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b1;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Cycle 11
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd3;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b0;
+        #0  Lb = 1'b1;
+        #0  Lk = 1'b1;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        //Final
+        #0  Mb = 3'd2;
+        #0  Ma = 3'd2;
+        #0  Ms = 1'b0;
+        #0  Mq = 1'b0;
+        #0  La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 1;
+		#10 La = 1'b0;
+        #0  Lb = 1'b0;
+        #0  Lk = 1'b0;
+        #0  clk = 0;
+        #10
+        
+        assert (Out == 24'b011010001000001011110101) else begin
+            $error ("Crap x4 - Inverse");
+            end
+		
+		
+		//Test the sign bit
+		Ms = 0;
+		Sn = 1;
+		Sd = 1;
+		#20
+		assert (signOut == 0 && errorOut == 0) else begin
+            $error ("Error sign test 1");
+            end
+		
+		Ms = 1;
+		Sn = 1;
+		Sd = 1;
+		#20
+		assert (errorOut == 1) else begin
+            $error ("Error sign test 2");
+            end
+			
+		Ms = 0;
+		Sn = 1;
+		Sd = 0;
+		#20
+		assert (signOut == 1 && errorOut == 0) else begin
+            $error ("Error sign test 3");
+            end
+			
+		Ms = 1;
+		Sn = 0;
+		Sd = 1;
+		#20
+		assert (signOut == 0 && errorOut == 0) else begin
+            $error ("Error sign test 4");
+            end
     end
         
 endmodule
