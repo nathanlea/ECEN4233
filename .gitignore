@@ -45,6 +45,9 @@ mp?/simulation/modelsim/vsim.wlf
 mp?/simulation/modelsim/*ram*.hdl.mif
 mp?/simulation/modelsim/memory.lst
 
+work
+transcript
+
 #######################
 # Vim gitignore files #
 #######################

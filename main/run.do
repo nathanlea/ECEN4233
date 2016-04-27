@@ -38,7 +38,10 @@ view wave
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
 # add wave -hex -r /tb/*
+add wave -noupdate -divider -height 32 "Inputs"
 add wave -unsigned /tb/*
+add wave -noupdate -divider -height 32 "Output"
+add wave -noupdate -divider -height 32 "Control Logic"
 # add wave -noupdate -divider -height 32 "Datapath"
 # add wave -hex /tb/dut/part1/*
 # add wave -noupdate -divider -height 32 "Control"
@@ -65,4 +68,4 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation
-run 1900
+run 10000

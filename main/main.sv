@@ -6,7 +6,8 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, Lf, clk, Out, signOut, err
     output logic[23:0] Out;
 	output logic signOut, errorOut;
     
-    logic[26:0] IA, muxBOut, muxAOut, nExt, dExt, Rk, Ra, Rb, Rf, rnd;
+    logic[26:0] IA, muxBOut, muxAOut, nExt, dExt, Rk, Ra, Rb, Rf, rnd_1, rnd_2;
+    logic [23:0] r_Out;
     logic[26:0] truncOut;
     logic[53:0] multOut;
     
@@ -71,16 +72,20 @@ module main(N, D, Sn, Sd, Mb, Ma, Ms, Mq, La, Lb, Lk, Lf, clk, Out, signOut, err
     //Push to Rk
     dff RK(modOut, Rk, clk, Lk);
 	
-	assign rnd = truncOut + 27'b000000000000000000000000001;
+	assign rnd_1 = truncOut + 27'b000000000000000000000000001;
 	
-	assign Out = ( truncOut[0] & truncOut[1] & truncOut[2] ) ? rnd[26:3] : truncOut[26:3];
+	assign r_Out = ( truncOut[0] & truncOut[1] & truncOut[2] ) ? rnd_1[26:3] : truncOut[26:3];
+    
+    assign rnd_2 = rnd_1 + 27'b000000000000000000000000001;
+	
+	assign Out = ( rnd_1[0] & rnd_1[1] & rnd_1[2] ) ? rnd_2[26:3] : r_Out;
 	
 	assign errorOut = Ms & Sn;
 	
 	assign signOut = Ms ? 1'b0 : Sn ^ Sd;
 	
 	//Push Rf, only for getting the inverse of the final
-	dff RF(rnd, Rf, clk, Lf);
+	dff RF(rnd_1, Rf, clk, Lf);
     
     //assign Out = truncOut[26:3];
     
