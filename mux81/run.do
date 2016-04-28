@@ -38,6 +38,8 @@ view wave
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
 # add wave -hex -r /tb/*
+add wave -noupdate -divider -height 32 "Input"
+add wave -noupdate -divider -height 32 "Output"
 add wave -dec /tb/*
 # add wave -noupdate -divider -height 32 "Datapath"
 # add wave -hex /tb/dut/part1/*
